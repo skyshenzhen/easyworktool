@@ -25,7 +25,7 @@ with st.sidebar:
     st.markdown("""
     1. 填写会议基本信息
     2. 添加讨论主题和事项
-    3. 点击"生成WORD文档"
+    3. 点击"生成WORD文档
     4. 下载生成的WORD文档
     """)
 
