@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from collections import defaultdict
-from io import BytesIO
 
 # -------------------------------------------------------------------------------
 # Name:         home
@@ -12,6 +10,8 @@ import streamlit as st
 from datetime import datetime, time
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
+from collections import defaultdict
+from io import BytesIO
 
 # 设置页面标题和布局
 st.set_page_config(page_title="会议纪要系统", layout="wide")
