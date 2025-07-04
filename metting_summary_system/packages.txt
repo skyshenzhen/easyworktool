@@ -1,2 +1,2 @@
-Cairo
-Pango
+cairo
+pango
