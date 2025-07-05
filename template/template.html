@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: "微软雅黑", Arial, sans-serif; font-size: 14pt; }
+    h1 { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>会议纪要</h1>
+  <p>会议时间：{{ meeting_date }}</p>
+  <p>会议地点：{{ meeting_location }}</p>
+  <p>会议主持：{{ meeting_chair }}</p>
+  <p>参会人员：{{ participants }}</p>
+  <p>会议记录人员：{{ recorder }}</p>
+  <p>会议议题：{{ meeting_topic }}</p>
+  {% for section in sections %}
+    <h2>{{ section.topic }}</h2>
+    <ul>
+      {% for item in section.topic_items %}
+        <li>{{ item.task }}  -- {{ item.person }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>
