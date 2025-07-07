@@ -159,7 +159,7 @@ if st.button("生成PDF文档"):
         meeting_data = generate_word()
 
         env = Environment(loader=FileSystemLoader('.'))
-        template = env.get_template('template/template.html')
+        template = env.get_template('template.html')
         html_out = template.render(meeting_data)
 
         # 用 BytesIO 生成内存中的 PDF
