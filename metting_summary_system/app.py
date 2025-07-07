@@ -159,9 +159,12 @@ if st.button("生成PDF文档"):
         # 生成数据结构
         meeting_data = generate_word()
 
-        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        env = Environment(loader=FileSystemLoader(BASE_DIR))
+        env = Environment(loader=FileSystemLoader('.'))
+        # 打印env的路径
+        print(f"模板加载路径: {env.loader}")
+        print(f"模板列表: {env.list_templates()}")
         template = env.get_template('template.html')
+        print(template.filename)
         html_out = template.render(meeting_data)
 
         # 用 BytesIO 生成内存中的 PDF
