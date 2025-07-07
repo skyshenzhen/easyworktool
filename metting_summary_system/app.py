@@ -160,10 +160,7 @@ if st.button("生成PDF文档"):
         meeting_data = generate_word()
 
         env = Environment(loader=FileSystemLoader('.'))
-        # 打印env的路径
-        print(f"模板加载路径: {env.loader}")
-        print(f"模板列表: {env.list_templates()}")
-        template = env.get_template('template.html')
+        template = env.get_template('metting_summary_system/template.html')
         print(template.filename)
         html_out = template.render(meeting_data)
 
