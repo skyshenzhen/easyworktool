@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 
 # -------------------------------------------------------------------------------
 # Name:         home
@@ -158,7 +159,8 @@ if st.button("生成PDF文档"):
         # 生成数据结构
         meeting_data = generate_word()
 
-        env = Environment(loader=FileSystemLoader('.'))
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        env = Environment(loader=FileSystemLoader(BASE_DIR))
         template = env.get_template('template.html')
         html_out = template.render(meeting_data)
 
