@@ -1,1 +1,4 @@
 weasyprint
+fonts-wqy-microhei
+fonts-wqy-zenhei
+fonts-noto-cjk
